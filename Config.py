@@ -59,7 +59,7 @@ gok_config = {
     'HERO_RANK_URL': 'https://cgi.datamore.qq.com/datamore/smobahelper/v2/herorank',
     'HERO_Smobahelper': 'https://cgi.datamore.qq.com/datamore/smobahelper/v2/herorel?',
 
-    'chrome_drive_path': '/home/sunny/wx/LOLGokEnv/chromedriver',
+    'chrome_drive_path': './chromedriver',
 
     'GOK_INSERT_TIME':datetime.datetime.now().strftime('%Y-%m-%d')
 }

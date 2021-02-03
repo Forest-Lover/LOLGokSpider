@@ -12,6 +12,7 @@
 > **以下步骤遇到问题可参照博文 [爬虫实战（一）—利用requests、mongo、redis代理池爬取英雄联盟opgg实时英雄数据](https://blog.csdn.net/luoz_java/article/details/92741358) ，若有其他问题请联系或提交issue**：
   * 安装mongodb
   * 安装python3
+  * 安装chrome,以及对应版本的chromedriver
   * clone本仓库
   * 安装必要模块：
     * 下载虚拟环境模块：pip3 install virtualenv

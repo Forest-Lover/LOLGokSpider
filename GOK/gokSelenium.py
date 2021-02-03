@@ -54,8 +54,10 @@ wait = WebDriverWait(browser, 10)
 gok_version = ''
 
 
+
 def get_proxy():
-    return requests.get("http://127.0.0.1:5010/get/").text
+    # return requests.get("http://127.0.0.1:5010/get/").text
+    return ''
 
 
 def delete_proxy(proxy):
@@ -66,7 +68,7 @@ def get_all_url():
     try_num = 5
 
     proxy = get_proxy()
-    chrome_options.add_argument('--proxy-server=http://' + proxy)
+    #chrome_options.add_argument('--proxy-server=http://' + proxy)
 
     browser.get("https://pvp.qq.com/web201605/herolist.shtml")
 
@@ -93,7 +95,7 @@ def get_all_url():
             if try_num == 2:
                 delete_proxy(proxy)
                 proxy = get_proxy()
-                chrome_options.add_argument('--proxy-server=http://' + proxy)
+                #chrome_options.add_argument('--proxy-server=http://' + proxy)
                 browser.get("https://pvp.qq.com/web201605/herolist.shtml")
         except e:
             log.logger.error('get_all_url爬取失败！' + str(e))
@@ -105,7 +107,7 @@ def get_all_url():
 
 def get_one_hero_detail(hero_url, gok_hero):
     proxy = get_proxy()
-    chrome_options.add_argument('--proxy-server=http://' + proxy)
+    #chrome_options.add_argument('--proxy-server=http://' + proxy)
     browser.get(hero_url)
 
     tmp1 = wait.until(
